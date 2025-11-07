@@ -3,7 +3,7 @@
         <p class="mb-1">
             <strong>Rubén Cordero</strong> · 2024–2025
         </p>
-        <a href="https://github.com/..." target="_blank" class=" text-light">
+        <a href="https://github.com/RubenCM03/IntegracionEjerciciosPHPWeb" target="_blank" class=" text-light">
             Repositori del projecte a GitHub
         </a>
     </div>
