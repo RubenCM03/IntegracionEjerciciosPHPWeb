@@ -5,7 +5,7 @@ include __DIR__ . '../../../includes/header.php';
 include 'php/404subida.php'
 ?>
 <main class="d-flex align-items-center justify-content-center mt-5">
-    <div class="card bg-dark-green text-white rounded-4 shadow-sm p-4 w-25">
+    <div class="card bg-dark-green text-white rounded-4 shadow-lg p-4 w-25">
         <h1 class="h3 text-center fw-bold mb-4">Pujar Fitxer</h1>
         <form enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <div class="mb-3">
