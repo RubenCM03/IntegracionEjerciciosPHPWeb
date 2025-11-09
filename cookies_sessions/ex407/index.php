@@ -1,26 +1,28 @@
 <?php
-    require 'php/407fondo.php'
+$page_title = "EX 407";
+$current_page = "ex_407";
+include __DIR__ . '../../../includes/header.php';
+include 'php/407fondo.php'
 ?>
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EX 407</title>
-</head>
-<body>
-    <form method="post">
-        <label for="colors">Selecciona un color de fons:</label>
-        <select name="colors" id="colors">
-            <?php
-            foreach ($colors as $color) {
-                $selected = (isset($_COOKIE['bgcolor']) && $_COOKIE['bgcolor'] === $color) ? 'selected' : '';
-                echo "<option value=\"$color\" $selected>$color</option>";
-            }
-            ?>
-        </select>
-        <br><br>
-        <input type="submit" name="btnCanviarFondo" value="Canviar fons" />
-    </form>
-</body>
-</html>
+
+<main class="d-flex justify-content-center align-items-center mt-5">
+    <div class="card bg-dark-green text-white rounded-4 shadow-sm p-4 w-50">
+        <form method="post">
+            <h3 class="text-center mb-3">Canvi de color del fons (Cookies)</h3>
+            <div class="mb-3">
+                <label for="colors" class="form-label fw-semibold">Selecciona un color de fons:</label>
+                <select name="colors" id="colors" class="form-select">
+                    <?php
+                    foreach ($colors as $color) {
+                        $selected = (isset($_COOKIE['bgcolor']) && $_COOKIE['bgcolor'] === $color) ? 'selected' : '';
+                        echo "<option value=\"$color\" $selected>$color</option>";
+                    }
+                    ?>
+                </select>
+            </div>
+            <div class="d-flex justify-content-center">
+                <input type="submit" name="btnCanviarFons" class="btn btn-light fw-bold w-50" value="Canviar fons" />
+            </div>
+        </form>
+    </div>
+</main>

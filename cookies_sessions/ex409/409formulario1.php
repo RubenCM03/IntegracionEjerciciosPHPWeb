@@ -1,34 +1,45 @@
 <?php
+$page_title = "EX 409 1";
+$current_page = "ex_409_1";
+include __DIR__ . '../../../includes/header.php';
 session_start();
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>EX 409 1</title>
-</head>
-<body>
-<h2>Formulario 1</h2>
-<form action="409formulario2.php" method="post">
-    <label>Nom i cognoms:</label><br>
-    <input type="text" name="nom" required><br><br>
+<main class="d-flex justify-content-center align-items-center mt-5">
+    <div class="card bg-dark-green text-white rounded-4 shadow-sm p-4 w-25">
+        <h2 class="text-center mb-4">Formulario 1</h2>
+        <form action="409formulario2.php" method="post">
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom i cognoms:</label>
+                <input type="text" id="nom" name="nom" class="form-control" required>
+            </div>
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
 
-    <label>URL de la pàgina personal:</label><br>
-    <input type="url" name="url"><br><br>
+            <div class="mb-3">
+                <label for="url" class="form-label">URL de la pàgina personal:</label>
+                <input type="url" id="url" name="url" class="form-control">
+            </div>
 
-    <label>Gènere:</label><br>
-    <input type="radio" name="genere" value="Masculí" required> Masculí
-    <input type="radio" name="genere" value="Femení"> Femení
-    <input type="radio" name="genere" value="Altre"> Altre<br><br>
+            <div class="mb-3">
+                <label class="form-label">Gènere:</label><br>
+                <input type="radio" id="masculi" name="genere" value="Masculí" required>
+                <label for="masculi" class="me-3">Masculí</label>
 
-    <input type="submit" value="Continua">
-</form>
-</body>
-</html>
+                <input type="radio" id="femeni" name="genere" value="Femení">
+                <label for="femeni" class="me-3">Femení</label>
 
-</body>
-</html>
+                <input type="radio" id="altre" name="genere" value="Altre">
+                <label for="altre">Altre</label>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <input type="submit" value="Continua" class="btn btn-light fw-bold w-50">
+            </div>
+        </form>
+    </div>
+</main>
+

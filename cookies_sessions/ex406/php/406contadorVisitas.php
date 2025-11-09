@@ -15,6 +15,6 @@
         $accessos = $_COOKIE['accessos'] + 1 ;
         $firstVisit = True;
     }
-    setcookie('accessos', $accessos, time() + 3600 * 24 * 30); // Caduca en 30 dies
-    echo "<p>Has visitat aquesta pàgina $accessos vegades.</p>";
+    setcookie('accessos', $accessos, time() + 3600 * 24 * 30);
+    $mensaje = "Has visitat aquesta pàgina $accessos vegades.";
 ?>
